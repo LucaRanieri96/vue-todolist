@@ -4,6 +4,8 @@ createApp({
   data() {
     return {
       title: "TODO LIST",
+      newTask: "",
+      error: null,
       tasks: [
         { text: "Learn Html", 
           done: false
@@ -27,6 +29,18 @@ createApp({
     },
     deleteTask(i) {
       this.tasks.splice(i, 1);
+    },
+    addTasks() {
+      console.log("add the current task to the list");
+      // pushare dentro task la nuova task
+
+      if (this.newTask.length > 1) {
+        this.tasks.unshift(this.newTask);
+        this.newTask = "";
+        this.error = null;
+      } else {
+        this.error = "sorry, the task length must be at least 2 characters";
+      }
     },
   },
 }).mount("#app");
