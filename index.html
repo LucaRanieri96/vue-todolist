@@ -25,12 +25,15 @@
         <!-- lista delle task (compare se l'array contiene più di un elemento) -->
         <ul class="mt-3" v-if="tasks.length > 0">
           <!-- task in tasks prende il singolo oggetto dentro l'array -->
-          <li v-for="(task, i) in tasks">
+          <li v-for="(task, i) in tasks" class="d-flex">
             <!-- aggiungo una classe barred alla task in base al valore booleano done --> 
             <p :class="{barred: task.done}">{{task.text}}</p>
             <div @click="barredTask(i)"><!-- funzione per cambiare il valore di done da vero a true alla pressione dell'icona-->
              <i class="fas fa-check-circle fa-sm fa-fw ms-2"></i>
-           </div>
+            </div>
+            <div @click="deleteTask(i)">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
           </li>
            <!-- metto un icona da cliccare per barrare le task -->
         </ul>

@@ -24,7 +24,10 @@ createApp({
     barredTask(i) {
       this.tasks[i].done = true;
       console.log("hai cliccato sull'icona");
-    }
+    },
+    deleteTask(i) {
+      this.tasks.splice(i, 1);
+    },
   },
 }).mount("#app");
 
