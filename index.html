@@ -19,14 +19,14 @@
       <h1 class="text-light text-center">{{title}}</h1>
     </header>
     <main class="text-center">
-      <div class="container">
+      <div class="container d-flex justify-content-center">
 
-        <div class="card">
+        <div class="card w-50">
           <div class="tasks">
             <!-- titolo delle task -->
-            <h2 class="mt-4">Tasks</h2>
+            <h2 class="my-4">Tasks</h2>
             <!-- lista delle task (compare se l'array contiene più di un elemento) -->
-            <ul class="mt-3" v-if="tasks.length > 0">
+            <ul v-if="tasks.length > 0">
               <!-- task in tasks prende il singolo oggetto dentro l'array -->
               <li v-for="(task, i) in tasks" class="d-flex justify-content-center">
                 <!-- aggiungo una classe barred alla task in base al valore booleano done --> 
@@ -42,10 +42,10 @@
             </ul>
     
           </div>
-          <div class="add_tasks">
+          <div class="add_tasks my-4">
             <input type="text" v-model.trim="newTask" @keyup.enter="addTasks()">
             <button class="btn-light" @click="addTasks()">Add</button>
-            <div class="alert alert-danger" role="alert" v-if="error"><strong>{{error}}</strong></div>
+            <div class="alert alert-danger mt-2" role="alert" v-if="error"><strong>{{error}}</strong></div>
           </div>
   
         </div>
