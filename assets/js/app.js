@@ -24,7 +24,7 @@ createApp({
   },
   methods: {
     barredTask(i) {
-      this.tasks[i].done = true;
+      this.tasks[i].done = !this.tasks[i].done;
       console.log("hai cliccato sull'icona");
     },
     deleteTask(i) {
@@ -35,7 +35,7 @@ createApp({
       // pushare dentro task la nuova task
 
       if (this.newTask.length > 1) {
-        this.tasks.unshift(this.newTask);
+        this.tasks.push({text: this.newTask, done: false});
         this.newTask = "";
         this.error = null;
       } else {
