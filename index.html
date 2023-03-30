@@ -16,7 +16,7 @@
 <body>
   <div id="app">
     <header>
-      <h1 class="text-light text-center">{{title}}</h1>
+      <h1 class="text-light text-center py-5">{{title}}</h1>
     </header>
     <main class="text-center">
       <div class="container d-flex justify-content-center">
@@ -44,8 +44,8 @@
           </div>
           <div class="add_tasks my-4">
             <input type="text" v-model.trim="newTask" @keyup.enter="addTasks()">
-            <button class="btn-light" @click="addTasks()">Add</button>
-            <div class="alert alert-danger mt-2" role="alert" v-if="error"><strong>{{error}}</strong></div>
+            <button class="ms-4" @click="addTasks()">Add</button>
+            <div class="alert alert-danger mt-4" role="alert" v-if="error"><strong>{{error}}</strong></div>
           </div>
   
         </div>
