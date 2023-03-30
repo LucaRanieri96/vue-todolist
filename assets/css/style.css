@@ -23,3 +23,10 @@ input,
 button {
     border-radius: 0.5rem;
 }
+
+img {
+    height: 40%;
+    position: absolute;
+    top:0;
+    right: 5vw;
+}

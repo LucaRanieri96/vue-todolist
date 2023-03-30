@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      dog:"./assets/img/dog.gif",
       title: "TODO LIST",
       newTask: "",
       error: null,
