@@ -2,3 +2,7 @@ body{
     background-color: rgb(66, 66, 66);
    
 }
+
+.barred {
+    text-decoration: line-through;
+}
